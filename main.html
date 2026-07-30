@@ -31,7 +31,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: 0;
             overflow: hidden;
         }
 
@@ -45,6 +45,7 @@
             height: auto;
             transform: translate(-50%, -50%);
             object-fit: cover;
+            opacity: 0.8;
         }
 
         .video-background::after {
@@ -54,7 +55,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(30,30,30,0.6) 100%);
+            background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(30,30,30,0.65) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Fallback background if video doesn't load */
+        .video-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+            z-index: 0;
         }
 
         /* Navigation Header */
@@ -65,7 +80,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000;
+            z-index: 2000;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
@@ -297,6 +312,8 @@
         .main-content {
             margin-top: 80px;
             padding: 2rem 0;
+            position: relative;
+            z-index: 1;
         }
 
         .container {
@@ -1349,7 +1366,7 @@
             justify-content: center;
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(212,175,55,0.4);
-            z-index: 1000;
+            z-index: 3000;
             transition: all 0.3s ease;
             animation: pulse-float 2s infinite;
         }
@@ -1475,8 +1492,11 @@
 <body>
     <!-- Video Background -->
     <div class="video-background">
-        <video autoplay muted loop playsinline>
-            <source src="https://cdn.pixabay.com/video/2023/05/17/162849-826817155_large.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <!-- Multiple video sources for better compatibility -->
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-architecture-of-a-luxurious-building-4124-large.mp4" type="video/mp4">
+            <source src="https://cdn.pixkit.co/videos/preview/mixkit-modern-luxury-house-interior-4129-large.mp4" type="video/mp4">
+            <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6d388d82b1&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -2591,6 +2611,63 @@ Date: ${new Date().toLocaleString()}`;
                 delete window.closeHostingModal;
             };
         }
+
+        // ========================================
+        // VIDEO BACKGROUND INITIALIZATION
+        // ========================================
+        
+        // Initialize video background on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('bgVideo');
+            
+            if (video) {
+                console.log('🎬 Initializing background video...');
+                
+                // Force video to play
+                video.muted = true;
+                video.playsInline = true;
+                video.autoplay = true;
+                
+                // Try to play the video
+                const playPromise = video.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise
+                        .then(() => {
+                            console.log('✅ Background video playing successfully');
+                            video.style.opacity = '0.8';
+                        })
+                        .catch(error => {
+                            console.log('⚠️ Video autoplay failed:', error);
+                            // Fallback: show gradient background
+                            console.log('Using fallback gradient background');
+                        });
+                }
+                
+                // Handle video errors
+                video.addEventListener('error', function(e) {
+                    console.log('❌ Video error:', e);
+                    console.log('Using fallback gradient background');
+                });
+                
+                // Handle video loading
+                video.addEventListener('loadeddata', function() {
+                    console.log('✅ Video loaded successfully');
+                });
+            }
+        });
+
+        // User interaction fallback - try to play video on first click
+        document.addEventListener('click', function playOnClick() {
+            const video = document.getElementById('bgVideo');
+            if (video && video.paused) {
+                video.play().then(() => {
+                    console.log('✅ Video started after user interaction');
+                }).catch(err => {
+                    console.log('⚠️ Could not start video:', err);
+                });
+            }
+        }, { once: true });
     </script>
 </body>
 </html>
