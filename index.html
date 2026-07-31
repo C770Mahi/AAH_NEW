@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aah Developers - Professional Construction Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -334,6 +335,30 @@
         setTimeout(() => {
             enterSite();
         }, 20000);
+    </script>
+
+    <!-- Floating Click Me Button -->
+    <div class="floating-click-btn" onclick="window.location.href='main.html#contact'">
+        <i class="fas fa-envelope"></i>
+        <span class="btn-text">CLICK ME</span>
+        <div class="click-tooltip">Hey hi click me! 👋</div>
+    </div>
+
+    <style>
+        .floating-click-btn { position: fixed; bottom: 30px; right: 30px; width: 80px; height: 80px; background: linear-gradient(135deg, #D4AF37, #B8860B); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(212,175,55,0.5); z-index: 10000; transition: all 0.3s ease; animation: pulse-glow 2s infinite; }
+        .floating-click-btn:hover { transform: scale(1.1); box-shadow: 0 15px 40px rgba(212,175,55,0.7); }
+        .floating-click-btn i { font-size: 28px; color: white; margin-bottom: 3px; }
+        .floating-click-btn .btn-text { font-size: 10px; font-weight: bold; color: white; letter-spacing: 0.5px; }
+        .click-tooltip { position: absolute; top: 50%; right: 100px; transform: translateY(-50%); background: linear-gradient(135deg, #2c3e50, #34495e); color: white; padding: 12px 20px; border-radius: 25px; font-weight: 600; font-size: 14px; white-space: nowrap; box-shadow: 0 8px 25px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: all 0.3s ease; }
+        .click-tooltip::after { content: ''; position: absolute; top: 50%; right: -10px; transform: translateY(-50%); width: 0; height: 0; border-left: 10px solid #34495e; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+        .click-tooltip.show { opacity: 1; animation: bounce-tooltip 0.5s ease; }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 10px 30px rgba(212,175,55,0.5); } 50% { box-shadow: 0 10px 40px rgba(212,175,55,0.8), 0 0 30px rgba(212,175,55,0.4); } }
+        @keyframes bounce-tooltip { 0%, 100% { transform: translateY(-50%) translateX(0); } 50% { transform: translateY(-50%) translateX(-10px); } }
+    </style>
+
+    <script>
+        setInterval(() => { const t = document.querySelector('.click-tooltip'); if(t) { t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 3000); } }, 5000);
+        setTimeout(() => { const t = document.querySelector('.click-tooltip'); if(t) { t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 3000); } }, 2000);
     </script>
 </body>
 </html>
