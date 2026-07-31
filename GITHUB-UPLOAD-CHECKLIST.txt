@@ -1,0 +1,285 @@
+===============================================
+   GITHUB BACKUP - COMPLETE UPLOAD CHECKLIST
+===============================================
+
+Your GitHub Repository: https://github.com/C770Mahi/AAH_NEW
+
+This checklist ensures ALL your files are safely backed up in GitHub.
+If you lose your local files, you can download everything from GitHub!
+
+===============================================
+
+FILES TO UPLOAD (Total: 27 files)
+----------------------------------
+
+✓ CHECKLIST - Mark each file as you upload it:
+
+HTML FILES (6 files):
+□ index.html (12 KB) - Landing page
+□ main.html (104 KB) - Main website with navigation
+□ projects.html (42 KB) - Project gallery page
+□ interior-design.html (10 KB)
+□ labour-contract.html (8 KB)
+□ material-contract.html (6 KB)
+
+PROJECT PHOTOS (10 files):
+□ project1-photo1.jpeg (299 KB)
+□ project1-photo2.jpg (287 KB)
+□ project1-photo3.jpg (166 KB)
+□ project1-photo4.jpg (272 KB)
+□ project1-photo5.jpg (187 KB)
+□ project1-photo6.jpg (220 KB)
+□ project1-photo7.jpg (215 KB)
+□ project1-photo8.jpg (310 KB)
+□ project1-photo9.jpg (156 KB)
+□ project1-photo10.jpg (162 KB)
+
+VIDEOS (5 files):
+□ video1.mp4 (1.2 MB) ✓ SMALL - Easy upload
+□ video2.mp4 (8.8 MB) ✓ MEDIUM - Easy upload
+□ video3.mp4 (3.9 MB) ✓ SMALL - Easy upload
+□ video4.mp4 (27 MB) ⚠️ LARGE - Use method below
+□ video5.mp4 (44 MB) ⚠️ LARGE - Use method below
+
+LOGO & INSTRUCTIONS (4 files):
+□ logo.jpg (349 KB)
+□ PROJECT-PHOTOS-INSTRUCTIONS.txt (6 KB)
+□ VIDEO-INSTRUCTIONS.txt (4 KB)
+□ .nojekyll (0 KB) - Important for GitHub Pages!
+
+CONFIGURATION FOLDER:
+□ .github/workflows/deploy.yml - Auto-deployment
+
+===============================================
+
+METHOD 1: WEB UPLOAD (For Files Under 25MB)
+--------------------------------------------
+
+STEP 1: Go to Your Repository
+   https://github.com/C770Mahi/AAH_NEW
+
+STEP 2: Upload Files in Batches
+
+BATCH 1 - HTML Files:
+1. Click "Add file" → "Upload files"
+2. Drag and drop ALL 6 HTML files:
+   - index.html
+   - main.html
+   - projects.html
+   - interior-design.html
+   - labour-contract.html
+   - material-contract.html
+3. Scroll down, add commit message: "Updated all HTML files"
+4. Click "Commit changes"
+
+BATCH 2 - Project Photos (Part 1):
+1. Click "Add file" → "Upload files"
+2. Drag and drop photos 1-5:
+   - project1-photo1.jpeg
+   - project1-photo2.jpg
+   - project1-photo3.jpg
+   - project1-photo4.jpg
+   - project1-photo5.jpg
+3. Commit message: "Added project photos 1-5"
+4. Click "Commit changes"
+
+BATCH 3 - Project Photos (Part 2):
+1. Click "Add file" → "Upload files"
+2. Drag and drop photos 6-10:
+   - project1-photo6.jpg
+   - project1-photo7.jpg
+   - project1-photo8.jpg
+   - project1-photo9.jpg
+   - project1-photo10.jpg
+3. Commit message: "Added project photos 6-10"
+4. Click "Commit changes"
+
+BATCH 4 - Small Videos:
+1. Click "Add file" → "Upload files"
+2. Drag and drop:
+   - video1.mp4 (1.2 MB)
+   - video2.mp4 (8.8 MB)
+   - video3.mp4 (3.9 MB)
+3. Commit message: "Added videos 1-3"
+4. Click "Commit changes"
+
+BATCH 5 - Logo & Instructions:
+1. Click "Add file" → "Upload files"
+2. Drag and drop:
+   - logo.jpg
+   - PROJECT-PHOTOS-INSTRUCTIONS.txt
+   - VIDEO-INSTRUCTIONS.txt
+   - .nojekyll
+3. Commit message: "Added logo and instructions"
+4. Click "Commit changes"
+
+⚠️ PROBLEM: Videos 4 & 5 are TOO LARGE for web upload (>25MB limit)
+
+===============================================
+
+METHOD 2: GITHUB DESKTOP (For Large Files)
+-------------------------------------------
+
+For video4.mp4 (27 MB) and video5.mp4 (44 MB):
+
+OPTION A: Use GitHub Desktop (Recommended)
+
+STEP 1: Install GitHub Desktop
+   Download: https://desktop.github.com/
+   Install and sign in with your GitHub account
+
+STEP 2: Clone Your Repository
+   1. Open GitHub Desktop
+   2. Click "File" → "Clone repository"
+   3. Select "C770Mahi/AAH_NEW"
+   4. Choose location: C:\Users\AH02867\Documents\AAH_NEW_GitHub
+   5. Click "Clone"
+
+STEP 3: Copy Large Videos
+   1. Open the cloned folder
+   2. Copy video4.mp4 and video5.mp4 to this folder
+   3. GitHub Desktop will detect the changes
+
+STEP 4: Commit and Push
+   1. In GitHub Desktop, you'll see the files listed
+   2. Add commit message: "Added large videos 4 and 5"
+   3. Click "Commit to main"
+   4. Click "Push origin" (uploads to GitHub)
+
+DONE! All files are now on GitHub!
+
+===============================================
+
+OPTION B: Compress Large Videos (Alternative)
+----------------------------------------------
+
+If you don't want to use GitHub Desktop:
+
+1. Go to: https://www.freeconvert.com/video-compressor
+2. Upload video4.mp4 (27 MB)
+3. Set target size: 20 MB
+4. Download compressed version
+5. Rename to: video4.mp4
+6. Upload to GitHub (now under 25MB!)
+7. Repeat for video5.mp4
+
+===============================================
+
+VERIFICATION - Check Your GitHub
+---------------------------------
+
+After uploading, verify everything is there:
+
+STEP 1: Go to Repository
+   https://github.com/C770Mahi/AAH_NEW
+
+STEP 2: Count Files
+   You should see 27 files total
+
+STEP 3: Check GitHub Pages
+   Your live website: https://c770mahi.github.io/AAH_NEW/
+
+STEP 4: Test Photo Gallery
+   Visit: https://c770mahi.github.io/AAH_NEW/projects.html
+   All 10 photos should load!
+
+===============================================
+
+WHAT'S BACKED UP NOW?
+---------------------
+
+✓ All 6 HTML pages
+✓ All 10 project photos (your construction gallery!)
+✓ 3-5 background videos (depending on method)
+✓ Logo image
+✓ Instructions files
+✓ GitHub Pages configuration
+
+===============================================
+
+RECOVERY INSTRUCTIONS (If You Lose Files)
+------------------------------------------
+
+If your computer crashes or files are deleted:
+
+STEP 1: Download from GitHub
+   1. Go to: https://github.com/C770Mahi/AAH_NEW
+   2. Click green "Code" button
+   3. Click "Download ZIP"
+   4. Extract to your computer
+   5. All files restored!
+
+STEP 2: Or Clone with GitHub Desktop
+   1. Open GitHub Desktop
+   2. File → Clone Repository
+   3. Select AAH_NEW
+   4. Choose location
+   5. All files downloaded automatically!
+
+===============================================
+
+FILE SIZE SUMMARY
+-----------------
+
+Safe to Upload (Under 25MB):
+✓ All HTML files: 6 files
+✓ All photos: 10 files (total 2.4 MB)
+✓ Videos 1-3: 3 files (total 13.8 MB)
+✓ Logo & docs: 4 files
+
+Need Special Method (Over 25MB):
+⚠️ video4.mp4: 27 MB
+⚠️ video5.mp4: 44 MB
+
+Total Storage Used: ~130 MB (well within GitHub's 1GB limit!)
+
+===============================================
+
+IMPORTANT NOTES
+---------------
+
+✓ GitHub has 100MB per file limit (hard limit)
+✓ Web interface has 25MB per file limit
+✓ Your photos are perfect size - all under 500KB!
+✓ Videos work locally, may need compression for GitHub
+✓ All your code is safe once uploaded
+✓ You can download anytime from anywhere
+
+===============================================
+
+RECOMMENDATION
+--------------
+
+BEST APPROACH:
+1. Upload ALL files via web interface (except video4 & video5)
+2. Use GitHub Desktop for the 2 large videos
+3. OR compress videos to under 20MB each
+
+This way, EVERYTHING is backed up safely!
+
+===============================================
+
+CURRENT STATUS
+--------------
+
+Location of your files now:
+📁 C:\Users\AH02867\Downloads\MAHESH\aah_new\
+
+After GitHub upload, also available at:
+🌐 https://github.com/C770Mahi/AAH_NEW
+🌐 https://c770mahi.github.io/AAH_NEW/
+
+DOUBLE BACKUP = SAFE! ✓
+
+===============================================
+
+NEED HELP?
+----------
+
+If upload fails:
+• Check file name (no special characters)
+• Try one file at a time
+• Check internet connection
+• Use GitHub Desktop for large files
+
+===============================================

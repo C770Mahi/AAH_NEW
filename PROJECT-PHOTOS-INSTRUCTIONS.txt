@@ -1,0 +1,192 @@
+===============================================
+    HOW TO ADD YOUR PROJECT PHOTOS
+===============================================
+
+Your "Projects" page now has 3 ONGOING PROJECTS with photo galleries!
+- Project 1: 10-photo gallery (tell the complete construction story!)
+- Project 2: 3-photo gallery
+- Project 3: 3-photo gallery
+
+STEP 1: PREPARE YOUR PHOTOS
+----------------------------
+You need 16 photos total:
+
+PROJECT 1 - Luxury Villa Construction (10 PHOTOS):
+• project1-photo1.jpg (Site/Foundation)
+• project1-photo2.jpg (Structure/Framework)
+• project1-photo3.jpg (Walls/Roofing)
+• project1-photo4.jpg (Exterior work)
+• project1-photo5.jpg (Windows/Doors)
+• project1-photo6.jpg (Interior progress)
+• project1-photo7.jpg (Finishing work)
+• project1-photo8.jpg (Details/Features)
+• project1-photo9.jpg (Completion stage)
+• project1-photo10.jpg (Final overview)
+
+PROJECT 2 - Residential Apartment Complex (3 PHOTOS):
+• project2-photo1.jpg (Main photo)
+• project2-photo2.jpg (Progress photo)
+• project2-photo3.jpg (Detail photo)
+
+PROJECT 3 - Premium Office Interior (3 PHOTOS):
+• project3-photo1.jpg (Main photo)
+• project3-photo2.jpg (Progress photo)
+• project3-photo3.jpg (Detail photo)
+
+STEP 2: RESIZE YOUR PHOTOS (Recommended)
+-----------------------------------------
+For best performance, resize photos to:
+• Width: 800 pixels
+• Height: 500 pixels
+• Format: JPG or JPEG
+• File size: Under 500KB each
+
+Use online tools like:
+• https://www.iloveimg.com/resize-image
+• https://bulkresizephotos.com/
+
+STEP 3: RENAME YOUR PHOTOS
+---------------------------
+Rename your photos EXACTLY as shown above:
+✓ project1-photo1.jpg (lowercase, no spaces)
+✓ project2-photo2.jpg (lowercase, no spaces)
+etc.
+
+STEP 4: PLACE THE PHOTOS
+-------------------------
+Copy all 16 photo files to this folder:
+📁 C:\Users\AH02867\Downloads\MAHESH\aah_new\
+
+Your folder should have:
+✓ main.html
+✓ projects.html
+✓ project1-photo1.jpg  ← Project 1 (10 photos)
+✓ project1-photo2.jpg
+✓ project1-photo3.jpg
+✓ project1-photo4.jpg
+✓ project1-photo5.jpg
+✓ project1-photo6.jpg
+✓ project1-photo7.jpg
+✓ project1-photo8.jpg
+✓ project1-photo9.jpg
+✓ project1-photo10.jpg
+✓ project2-photo1.jpg  ← Project 2 (3 photos)
+✓ project2-photo2.jpg
+✓ project2-photo3.jpg
+✓ project3-photo1.jpg  ← Project 3 (3 photos)
+✓ project3-photo2.jpg
+✓ project3-photo3.jpg
+
+STEP 5: VIEW YOUR PROJECT PAGE
+-------------------------------
+1. Open projects.html in your browser
+2. You'll see 3 ongoing projects
+3. Each has a photo gallery with navigation arrows
+4. Click arrows or dots to browse through photos
+5. Click "Ongoing" filter to see only ongoing projects
+
+===============================================
+
+WHAT'S CURRENTLY SHOWING:
+-------------------------
+If you haven't added photos yet, you'll see placeholder images.
+These will automatically be replaced when you add your actual photos.
+
+===============================================
+
+PHOTO TIPS:
+-----------
+✓ Use high-quality, well-lit photos
+✓ Show different angles of the same project
+✓ Include before/during/after shots
+✓ Show construction progress chronologically
+✓ Capture key details and features
+
+Suggested Photo Sequence for PROJECT 1 (10 photos):
+• Photo 1: Site before construction / Land preparation
+• Photo 2: Foundation work / Excavation
+• Photo 3: Structure framework / Column work
+• Photo 4: Wall construction / Brick work
+• Photo 5: Roofing / Ceiling work
+• Photo 6: Exterior finishing / Plastering
+• Photo 7: Windows & Doors installation
+• Photo 8: Interior work / Rooms
+• Photo 9: Finishing touches / Painting
+• Photo 10: Final completed view / Exterior beauty shot
+
+For Projects 2 & 3 (3 photos each):
+• Photo 1: Wide angle / overall view
+• Photo 2: Construction progress / work in action
+• Photo 3: Close-up details / finishing work
+
+===============================================
+
+CUSTOMIZING PROJECT DETAILS:
+-----------------------------
+Want to change project names, descriptions, or sizes?
+
+1. Open projects.html in a text editor
+2. Find the project section (around line 727-859)
+3. Edit these parts:
+
+   <h3>Luxury Villa Construction</h3>
+   Change to your project name
+
+   <p class="project-description">...</p>
+   Change to your project description
+
+   <span>15,000 sq ft</span>
+   Change to actual size
+
+   <span>Est. Completion: 3 months</span>
+   Change to actual timeline
+
+===============================================
+
+ADDING MORE PROJECTS:
+---------------------
+Want to add a 4th or 5th ongoing project?
+
+1. Copy one of the existing project card blocks
+2. Paste it below the last project
+3. Change the numbers:
+   - project4-photo1.jpg
+   - project4-photo2.jpg
+   - project4-photo3.jpg
+4. Update project details
+5. Add 3 more photos to the folder
+6. Update filter count (+1 to "All Projects" and "Ongoing")
+
+===============================================
+
+FILTER SYSTEM:
+--------------
+Your projects page has smart filters:
+
+✓ Project Type: Material Contract, Complete Construction, Interior Design
+✓ Project Size: Small, Medium, Large
+✓ Status: Completed, Ongoing, Upcoming
+
+Click any filter to show only matching projects!
+
+===============================================
+
+UPLOADING TO GITHUB:
+--------------------
+When uploading to GitHub, include:
+• projects.html (updated)
+• All 9 project photo files
+
+Note: Keep photo files under 10MB each for GitHub.
+Larger files may need compression.
+
+===============================================
+
+NEED HELP?
+----------
+• Photos should be JPG or JPEG format
+• Use lowercase filenames with no spaces
+• Place all photos in the same folder as HTML files
+• Refresh browser (F5) after adding photos
+
+===============================================
