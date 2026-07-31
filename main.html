@@ -1333,6 +1333,32 @@
                 display: block;
             }
 
+            .nav-container {
+                padding: 0 1rem; /* Reduce padding on mobile */
+            }
+
+            .logo-section {
+                flex: 1; /* Allow it to take available space */
+                max-width: calc(100% - 60px); /* Leave space for menu button */
+            }
+
+            .logo-link {
+                gap: 10px; /* Reduce gap on mobile */
+                width: 100%;
+            }
+
+            .logo {
+                width: 50px; /* Slightly smaller on mobile */
+                height: 33px;
+                flex-shrink: 0; /* Prevent logo from shrinking */
+            }
+
+            .company-name {
+                font-size: 1.3rem; /* Slightly smaller but still readable */
+                white-space: nowrap; /* Prevent text wrapping */
+                overflow: visible; /* Show full text */
+            }
+
             .nav-links {
                 display: none;
                 position: fixed;
@@ -2951,6 +2977,19 @@ Date: ${new Date().toLocaleString()}`;
         }
 
         @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 0.75rem; /* Even less padding on small phones */
+            }
+
+            .logo {
+                width: 45px; /* Smaller logo on tiny screens */
+                height: 30px;
+            }
+
+            .company-name {
+                font-size: 1.1rem; /* Smaller but still visible */
+            }
+
             .floating-click-btn {
                 width: 65px;
                 height: 65px;
