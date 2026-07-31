@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=2.0, user-scalable=yes">
     <title>Our Projects - Aah Developers</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -466,19 +466,25 @@
                 display: none;
             }
             
+            /* Keep desktop layout on mobile */
             .page-header {
-                padding: 2rem 1rem;
+                padding: 3rem 1.5rem;
             }
             
             .page-header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .page-header p {
-                font-size: 1rem;
+                font-size: 1.2rem;
+            }
+            
+            .projects-layout {
+                flex-direction: row;
             }
             
             .projects-sidebar {
+                width: 280px;
                 flex-direction: column;
                 overflow-x: visible;
             }
@@ -488,27 +494,18 @@
                 width: 100%;
             }
             
-            .filter-section h3 {
-                font-size: 0.9rem;
-                margin-bottom: 0.8rem;
-            }
-            
-            .filter-option {
-                padding: 0.5rem 0;
-                font-size: 0.9rem;
-            }
-            
+            /* Keep same sizes as desktop */
             .projects-grid {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                gap: 2rem;
             }
             
             .project-card {
-                padding: 1.5rem;
+                padding: 2rem;
             }
             
             .media-gallery {
-                height: 220px;
+                height: 250px;
             }
             
             .media-item img {
@@ -517,76 +514,94 @@
             }
             
             .media-controls {
-                padding: 6px 12px;
-                gap: 10px;
+                padding: 8px 15px;
+                gap: 15px;
             }
             
             .media-btn {
-                font-size: 12px;
-                padding: 4px;
+                font-size: 14px;
+                padding: 5px;
             }
             
             .indicator {
-                width: 6px;
-                height: 6px;
+                width: 8px;
+                height: 8px;
             }
             
             .project-info h3 {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
             
             .project-description {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
             
             .project-details {
-                flex-direction: column;
-                gap: 0.5rem;
+                flex-direction: row;
+                gap: 2rem;
             }
             
             .back-to-home {
-                margin: 2rem 0;
+                margin: 3rem 0;
             }
         }
 
         @media (max-width: 480px) {
+            /* Keep desktop view even on small phones */
             .container {
                 padding: 0 1rem;
             }
             
             .page-header {
-                padding: 1.5rem 1rem;
+                padding: 2.5rem 1rem;
                 margin-bottom: 2rem;
             }
             
             .page-header h1 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
+            }
+            
+            .projects-sidebar {
+                width: 260px;
             }
             
             .filter-section {
-                padding: 1rem;
+                padding: 1.5rem;
             }
             
             .project-card {
-                padding: 1rem;
+                padding: 1.8rem;
             }
             
             .media-gallery {
-                height: 200px;
+                height: 250px;
             }
             
             .media-controls {
-                bottom: 10px;
-                padding: 5px 10px;
-                gap: 8px;
+                bottom: 15px;
+                padding: 8px 15px;
+                gap: 15px;
+            }
+            
+            .media-btn {
+                font-size: 14px;
+            }
+            
+            .indicator {
+                width: 8px;
+                height: 8px;
             }
             
             .project-info h3 {
-                font-size: 1.1rem;
+                font-size: 1.3rem;
             }
             
             .project-type {
-                font-size: 0.85rem;
+                font-size: 0.9rem;
+            }
+            
+            .project-description {
+                font-size: 1rem;
             }
             
             .back-btn {
@@ -833,6 +848,15 @@
                             <div class="project-type">Material Contract - Ongoing</div>
                             <h3>5-Floor Residential Building</h3>
                             <p class="project-description">Comprehensive end-to-end construction of a modern 5-floor residential building with premium materials and quality craftsmanship. Complete turnkey solution from foundation to finishing. Browse through 10 photos documenting our construction progress.</p>
+                            <div class="project-location" style="margin: 0.8rem 0; padding: 0.8rem; background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(212,175,55,0.1)); border-left: 3px solid #D4AF37; border-radius: 8px;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
+                                    <i class="fas fa-map-marker-alt" style="color: #D4AF37; font-size: 1.2rem;"></i>
+                                    <strong style="color: #2c3e50; font-size: 1.1rem;">Project Location</strong>
+                                </div>
+                                <p style="margin: 0; padding-left: 1.8rem; color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+                                    Bangalore, Hoskote to Airport Road, Near Mandur
+                                </p>
+                            </div>
                             <div class="project-details">
                                 <div class="project-area">
                                     <i class="fas fa-building"></i>

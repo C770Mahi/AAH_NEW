@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=2.0, user-scalable=yes">
     <title>Material Contract - Trivikra Constructions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -262,19 +263,19 @@
             font-size: 1rem;
         }
         
-        /* Mobile Responsive */
+        /* Mobile Responsive - Keep Desktop View */
         @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                padding: 30px 20px;
             }
             
             .header h1 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
             
             .service-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 30px;
             }
             
             .feature-list {
@@ -282,46 +283,49 @@
             }
             
             .project-gallery {
-                padding: 20px;
-                margin-top: 30px;
+                padding: 35px 20px;
+                margin-top: 40px;
             }
             
             .gallery-header h2 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+            
+            .gallery-header p {
+                font-size: 1rem;
             }
             
             .photo-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
             }
             
             .photo-item img {
-                height: 200px;
+                height: 250px;
             }
             
             .lightbox-nav {
-                font-size: 24px;
-                padding: 10px 15px;
+                font-size: 28px;
+                padding: 12px 18px;
             }
             
             .lightbox-prev {
-                left: 10px;
+                left: 15px;
             }
             
             .lightbox-next {
-                right: 10px;
+                right: 15px;
             }
             
             .lightbox-close {
-                top: 10px;
-                right: 20px;
-                font-size: 35px;
+                top: 15px;
+                right: 25px;
+                font-size: 38px;
             }
             
             .contact-btn {
-                display: block;
-                width: 100%;
-                margin: 10px 0;
+                display: inline-block;
+                margin: 10px;
             }
         }
         
@@ -399,6 +403,15 @@
             <div class="gallery-header">
                 <h2>🏗️ Our Ongoing Project - 5-Floor Residential Building</h2>
                 <p>Browse through our construction progress photos from foundation to finishing</p>
+                <div style="margin-top: 1rem; padding: 1rem; background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(212,175,55,0.15)); border-left: 4px solid #D4AF37; border-radius: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+                        <i class="fas fa-map-marker-alt" style="color: #D4AF37; font-size: 1.5rem;"></i>
+                        <strong style="color: #2c3e50; font-size: 1.2rem;">Project Location</strong>
+                    </div>
+                    <p style="margin: 0; text-align: center; color: #2c3e50; font-size: 1.1rem; font-weight: 500; line-height: 1.6;">
+                        Bangalore, Hoskote to Airport Road, Near Mandur
+                    </p>
+                </div>
             </div>
             
             <div class="photo-grid">
