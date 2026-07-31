@@ -1518,21 +1518,14 @@
     </style>
 </head>
 <body>
-    <!-- Luxury Animated Background -->
+    <!-- Video Background -->
     <div class="video-background">
-        <!-- YouTube Video Embed (Best Option - Always Works) -->
-        <iframe 
-            id="ytVideo"
-            src="https://www.youtube.com/embed/a6-nBJ7nN-E?autoplay=1&mute=1&loop=1&playlist=a6-nBJ7nN-E&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-            style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); pointer-events: none; z-index: 0;">
-        </iframe>
-        
-        <!-- Alternative: Local Video (Place your video file in the same folder) -->
-        <video autoplay muted loop playsinline id="bgVideo" style="display: none;">
-            <source src="background-video.mp4" type="video/mp4">
+        <!-- Local Video - Place your video file in the same folder -->
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="background.mp4" type="video/mp4">
+            <source src="bg-video.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
     </div>
 
@@ -2652,37 +2645,44 @@ Date: ${new Date().toLocaleString()}`;
         // ========================================
         
         window.addEventListener('DOMContentLoaded', function() {
-            console.log('🎬 YouTube video background loaded');
-            console.log('✅ You should see a luxury construction video playing in the background');
-            
-            // If you want to use a local video instead:
-            // 1. Download a construction/interior video
-            // 2. Name it "background-video.mp4"
-            // 3. Place it in the same folder as main.html
-            // 4. Uncomment the lines below:
-            
-            /*
             const video = document.getElementById('bgVideo');
-            const ytVideo = document.getElementById('ytVideo');
             
             if (video) {
-                video.style.display = 'block';
-                ytVideo.style.display = 'none';
+                console.log('🎬 Loading background video...');
                 
+                // Set video properties
                 video.muted = true;
                 video.playsInline = true;
                 video.autoplay = true;
                 video.volume = 0;
                 
-                video.play().then(() => {
-                    console.log('✅ Local video playing');
-                }).catch(err => {
-                    console.log('Using YouTube video instead');
-                    video.style.display = 'none';
-                    ytVideo.style.display = 'block';
+                // Try to play the video
+                const playPromise = video.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise
+                        .then(() => {
+                            console.log('✅ Background video is playing!');
+                        })
+                        .catch(error => {
+                            console.log('ℹ️ Video file not found. Using animated gradient background.');
+                            console.log('📹 To add a video background:');
+                            console.log('   1. Download a construction/interior video MP4');
+                            console.log('   2. Rename it to: background.mp4');
+                            console.log('   3. Place it in the same folder as main.html');
+                        });
+                }
+                
+                // Handle video errors
+                video.addEventListener('error', function() {
+                    console.log('ℹ️ No video file found - using beautiful animated background');
+                });
+                
+                // Handle successful video load
+                video.addEventListener('loadeddata', function() {
+                    console.log('✅ Video loaded successfully!');
                 });
             }
-            */
         });
     </script>
 </body>
