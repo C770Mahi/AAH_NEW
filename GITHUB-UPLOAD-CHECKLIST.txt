@@ -16,11 +16,11 @@ FILES TO UPLOAD (Total: 24 files)
 
 HTML FILES (6 files):
 □ index.html (12 KB) - Landing page
-□ main.html (104 KB) - Main website with navigation
+□ main.html (104 KB) - Main website with nested navigation
 □ projects.html (42 KB) - 5-Floor Building project gallery
 □ interior-design.html (10 KB)
 □ labour-contract.html (8 KB)
-□ material-contract.html (6 KB)
+□ material-contract.html (15 KB) - With 10-photo gallery
 
 PROJECT PHOTOS - 5-FLOOR BUILDING (10 files):
 □ project1-photo1.jpeg (299 KB) - Site/Foundation
