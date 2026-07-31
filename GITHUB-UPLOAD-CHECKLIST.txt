@@ -9,7 +9,7 @@ If you lose your local files, you can download everything from GitHub!
 
 ===============================================
 
-FILES TO UPLOAD (Total: 27 files)
+FILES TO UPLOAD (Total: 24 files)
 ----------------------------------
 
 ✓ CHECKLIST - Mark each file as you upload it:
@@ -17,22 +17,22 @@ FILES TO UPLOAD (Total: 27 files)
 HTML FILES (6 files):
 □ index.html (12 KB) - Landing page
 □ main.html (104 KB) - Main website with navigation
-□ projects.html (42 KB) - Project gallery page
+□ projects.html (42 KB) - 5-Floor Building project gallery
 □ interior-design.html (10 KB)
 □ labour-contract.html (8 KB)
 □ material-contract.html (6 KB)
 
-PROJECT PHOTOS (10 files):
-□ project1-photo1.jpeg (299 KB)
-□ project1-photo2.jpg (287 KB)
-□ project1-photo3.jpg (166 KB)
-□ project1-photo4.jpg (272 KB)
-□ project1-photo5.jpg (187 KB)
-□ project1-photo6.jpg (220 KB)
-□ project1-photo7.jpg (215 KB)
-□ project1-photo8.jpg (310 KB)
-□ project1-photo9.jpg (156 KB)
-□ project1-photo10.jpg (162 KB)
+PROJECT PHOTOS - 5-FLOOR BUILDING (10 files):
+□ project1-photo1.jpeg (299 KB) - Site/Foundation
+□ project1-photo2.jpg (287 KB) - Ground floor
+□ project1-photo3.jpg (166 KB) - 1st & 2nd floor
+□ project1-photo4.jpg (272 KB) - 3rd & 4th floor
+□ project1-photo5.jpg (187 KB) - 5th floor & roof
+□ project1-photo6.jpg (220 KB) - Exterior walls
+□ project1-photo7.jpg (215 KB) - Windows/doors
+□ project1-photo8.jpg (310 KB) - Interior work
+□ project1-photo9.jpg (156 KB) - Finishing
+□ project1-photo10.jpg (162 KB) - Overall view
 
 VIDEOS (5 files):
 □ video1.mp4 (1.2 MB) ✓ SMALL - Easy upload
@@ -74,24 +74,24 @@ BATCH 1 - HTML Files:
 
 BATCH 2 - Project Photos (Part 1):
 1. Click "Add file" → "Upload files"
-2. Drag and drop photos 1-5:
+2. Drag and drop photos 1-5 of 5-Floor Building:
    - project1-photo1.jpeg
    - project1-photo2.jpg
    - project1-photo3.jpg
    - project1-photo4.jpg
    - project1-photo5.jpg
-3. Commit message: "Added project photos 1-5"
+3. Commit message: "Added 5-Floor Building photos 1-5"
 4. Click "Commit changes"
 
 BATCH 3 - Project Photos (Part 2):
 1. Click "Add file" → "Upload files"
-2. Drag and drop photos 6-10:
+2. Drag and drop photos 6-10 of 5-Floor Building:
    - project1-photo6.jpg
    - project1-photo7.jpg
    - project1-photo8.jpg
    - project1-photo9.jpg
    - project1-photo10.jpg
-3. Commit message: "Added project photos 6-10"
+3. Commit message: "Added 5-Floor Building photos 6-10"
 4. Click "Commit changes"
 
 BATCH 4 - Small Videos:
@@ -174,22 +174,22 @@ STEP 1: Go to Repository
    https://github.com/C770Mahi/AAH_NEW
 
 STEP 2: Count Files
-   You should see 27 files total
+   You should see 24 files total (or 21 without large videos)
 
 STEP 3: Check GitHub Pages
    Your live website: https://c770mahi.github.io/AAH_NEW/
 
 STEP 4: Test Photo Gallery
    Visit: https://c770mahi.github.io/AAH_NEW/projects.html
-   All 10 photos should load!
+   Your 5-Floor Building with all 10 photos should display!
 
 ===============================================
 
 WHAT'S BACKED UP NOW?
 ---------------------
 
-✓ All 6 HTML pages
-✓ All 10 project photos (your construction gallery!)
+✓ All 6 HTML pages (with nested navigation)
+✓ All 10 project photos (5-Floor Building gallery!)
 ✓ 3-5 background videos (depending on method)
 ✓ Logo image
 ✓ Instructions files

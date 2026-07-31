@@ -2,36 +2,24 @@
     HOW TO ADD YOUR PROJECT PHOTOS
 ===============================================
 
-Your "Projects" page now has 3 ONGOING PROJECTS with photo galleries!
-- Project 1: 10-photo gallery (tell the complete construction story!)
-- Project 2: 3-photo gallery
-- Project 3: 3-photo gallery
+Your "Projects" page now has 1 ONGOING PROJECT with photo gallery!
+- Project 1: 10-photo gallery (complete construction story!)
 
 STEP 1: PREPARE YOUR PHOTOS
 ----------------------------
-You need 16 photos total:
+You need 10 photos total:
 
-PROJECT 1 - Luxury Villa Construction (10 PHOTOS):
-• project1-photo1.jpg (Site/Foundation)
-• project1-photo2.jpg (Structure/Framework)
-• project1-photo3.jpg (Walls/Roofing)
-• project1-photo4.jpg (Exterior work)
-• project1-photo5.jpg (Windows/Doors)
-• project1-photo6.jpg (Interior progress)
-• project1-photo7.jpg (Finishing work)
-• project1-photo8.jpg (Details/Features)
-• project1-photo9.jpg (Completion stage)
-• project1-photo10.jpg (Final overview)
-
-PROJECT 2 - Residential Apartment Complex (3 PHOTOS):
-• project2-photo1.jpg (Main photo)
-• project2-photo2.jpg (Progress photo)
-• project2-photo3.jpg (Detail photo)
-
-PROJECT 3 - Premium Office Interior (3 PHOTOS):
-• project3-photo1.jpg (Main photo)
-• project3-photo2.jpg (Progress photo)
-• project3-photo3.jpg (Detail photo)
+PROJECT 1 - 5-Floor Residential Building (10 PHOTOS):
+• project1-photo1.jpeg (Site preparation/Foundation)
+• project1-photo2.jpg (Foundation & Ground floor work)
+• project1-photo3.jpg (1st & 2nd Floor structure)
+• project1-photo4.jpg (3rd & 4th Floor construction)
+• project1-photo5.jpg (5th Floor & Roof work)
+• project1-photo6.jpg (Exterior walls & Plastering)
+• project1-photo7.jpg (Windows & Door installation)
+• project1-photo8.jpg (Interior work progress)
+• project1-photo9.jpg (Finishing & Painting)
+• project1-photo10.jpg (Overall building view)
 
 STEP 2: RESIZE YOUR PHOTOS (Recommended)
 -----------------------------------------
@@ -54,13 +42,13 @@ etc.
 
 STEP 4: PLACE THE PHOTOS
 -------------------------
-Copy all 16 photo files to this folder:
+Copy all 10 photo files to this folder:
 📁 C:\Users\AH02867\Downloads\MAHESH\aah_new\
 
 Your folder should have:
 ✓ main.html
 ✓ projects.html
-✓ project1-photo1.jpg  ← Project 1 (10 photos)
+✓ project1-photo1.jpeg  ← Your 5-Floor Building photos
 ✓ project1-photo2.jpg
 ✓ project1-photo3.jpg
 ✓ project1-photo4.jpg
@@ -70,20 +58,14 @@ Your folder should have:
 ✓ project1-photo8.jpg
 ✓ project1-photo9.jpg
 ✓ project1-photo10.jpg
-✓ project2-photo1.jpg  ← Project 2 (3 photos)
-✓ project2-photo2.jpg
-✓ project2-photo3.jpg
-✓ project3-photo1.jpg  ← Project 3 (3 photos)
-✓ project3-photo2.jpg
-✓ project3-photo3.jpg
 
 STEP 5: VIEW YOUR PROJECT PAGE
 -------------------------------
 1. Open projects.html in your browser
-2. You'll see 3 ongoing projects
-3. Each has a photo gallery with navigation arrows
-4. Click arrows or dots to browse through photos
-5. Click "Ongoing" filter to see only ongoing projects
+2. You'll see your 5-Floor Residential Building project
+3. 10-photo gallery with navigation arrows
+4. Click arrows (◄ ►) or dots to browse through photos
+5. Filter shows: 1 Ongoing Project
 
 ===============================================
 
@@ -102,22 +84,19 @@ PHOTO TIPS:
 ✓ Show construction progress chronologically
 ✓ Capture key details and features
 
-Suggested Photo Sequence for PROJECT 1 (10 photos):
-• Photo 1: Site before construction / Land preparation
-• Photo 2: Foundation work / Excavation
-• Photo 3: Structure framework / Column work
-• Photo 4: Wall construction / Brick work
-• Photo 5: Roofing / Ceiling work
-• Photo 6: Exterior finishing / Plastering
+Suggested Photo Sequence for 5-FLOOR BUILDING (10 photos):
+• Photo 1: Site preparation / Foundation excavation
+• Photo 2: Foundation & Ground floor structure
+• Photo 3: 1st & 2nd Floor construction progress
+• Photo 4: 3rd & 4th Floor structure development
+• Photo 5: 5th Floor & Roofing work
+• Photo 6: Exterior walls & Plastering
 • Photo 7: Windows & Doors installation
-• Photo 8: Interior work / Rooms
-• Photo 9: Finishing touches / Painting
-• Photo 10: Final completed view / Exterior beauty shot
+• Photo 8: Interior work across floors
+• Photo 9: Finishing touches / Painting work
+• Photo 10: Overall building exterior view
 
-For Projects 2 & 3 (3 photos each):
-• Photo 1: Wide angle / overall view
-• Photo 2: Construction progress / work in action
-• Photo 3: Close-up details / finishing work
+This sequence tells the complete construction journey floor by floor!
 
 ===============================================
 
@@ -126,36 +105,36 @@ CUSTOMIZING PROJECT DETAILS:
 Want to change project names, descriptions, or sizes?
 
 1. Open projects.html in a text editor
-2. Find the project section (around line 727-859)
+2. Find the project section (around line 784)
 3. Edit these parts:
 
-   <h3>Luxury Villa Construction</h3>
-   Change to your project name
+   <h3>5-Floor Residential Building</h3>
+   Change to your specific project name
 
    <p class="project-description">...</p>
    Change to your project description
 
    <span>15,000 sq ft</span>
-   Change to actual size
+   Change to actual total area
 
    <span>Est. Completion: 3 months</span>
-   Change to actual timeline
+   Change to your actual timeline
 
 ===============================================
 
 ADDING MORE PROJECTS:
 ---------------------
-Want to add a 4th or 5th ongoing project?
+Want to add a 2nd or 3rd ongoing project?
 
-1. Copy one of the existing project card blocks
-2. Paste it below the last project
-3. Change the numbers:
-   - project4-photo1.jpg
-   - project4-photo2.jpg
-   - project4-photo3.jpg
-4. Update project details
-5. Add 3 more photos to the folder
-6. Update filter count (+1 to "All Projects" and "Ongoing")
+1. Copy the existing project card block from projects.html
+2. Paste it below Project 1 (before </div> that closes projects-grid)
+3. Change the photo file names:
+   - project2-photo1.jpg
+   - project2-photo2.jpg
+   - project2-photo3.jpg (or more if needed)
+4. Update project details (name, description, size, timeline)
+5. Add the new photos to the folder
+6. Update filter counts in the sidebar (+1 to relevant categories)
 
 ===============================================
 
