@@ -1,74 +1,137 @@
 ===============================================
-   HOW TO ADD BACKGROUND VIDEO TO YOUR WEBSITE
+  VIDEO SLIDESHOW - 5 ROTATING BACKGROUND VIDEOS
 ===============================================
 
-Your website currently shows a beautiful animated gradient background.
-To add a VIDEO background, follow these simple steps:
+Your website is now set up to show 5 VIDEOS that automatically rotate!
+Each video will play for 15 seconds, then smoothly fade to the next one.
 
-STEP 1: DOWNLOAD A VIDEO
--------------------------
-Choose one of these FREE video websites:
+STEP 1: PREPARE YOUR 5 VIDEOS
+------------------------------
+You have 5 videos! Now you need to rename them:
 
-Option A - Pexels (Recommended):
-1. Go to: https://www.pexels.com/videos/
-2. Search for: "luxury interior" or "construction" or "modern house"
-3. Find a video you like
-4. Click "Download" and select "Full HD" or "HD"
+1. Rename your 1st video to:  video1.mp4
+2. Rename your 2nd video to:  video2.mp4
+3. Rename your 3rd video to:  video3.mp4
+4. Rename your 4th video to:  video4.mp4
+5. Rename your 5th video to:  video5.mp4
 
-Option B - Pixabay:
-1. Go to: https://pixabay.com/videos/
-2. Search for: "interior design" or "construction"
-3. Download the video
+IMPORTANT: Names must be EXACTLY as shown (lowercase, no spaces)
 
-Option C - Coverr:
-1. Go to: https://coverr.co/
-2. Browse "Architecture" or "Business" categories
-3. Download any video you like
+STEP 2: PLACE THE VIDEOS IN THE CORRECT FOLDER
+-----------------------------------------------
+Copy all 5 video files to this folder:
+📁 C:\Users\AH02867\Downloads\MAHESH\aah_new\
 
-STEP 2: PREPARE THE VIDEO
---------------------------
-1. Find the downloaded video file (usually in your Downloads folder)
-2. RENAME the file to: background.mp4
-   (Make sure it's exactly "background.mp4" - lowercase)
+Your folder should now have:
+✓ main.html
+✓ index.html
+✓ video1.mp4  ← Your 1st video
+✓ video2.mp4  ← Your 2nd video
+✓ video3.mp4  ← Your 3rd video
+✓ video4.mp4  ← Your 4th video
+✓ video5.mp4  ← Your 5th video
 
-STEP 3: PLACE THE VIDEO
-------------------------
-1. Copy the "background.mp4" file
-2. Paste it in the SAME FOLDER as your main.html file
-   (This folder: C:\Users\AH02867\Downloads\MAHESH\aah_new\)
-
-STEP 4: REFRESH THE WEBSITE
+STEP 3: REFRESH THE WEBSITE
 ----------------------------
-1. Open your website in the browser
+1. Open main.html in your browser
 2. Press F5 to refresh
-3. The video should now be playing in the background!
+3. Watch the video slideshow!
+
+WHAT WILL HAPPEN:
+-----------------
+• Video 1 plays for 15 seconds
+• Smoothly fades to Video 2 (plays for 15 seconds)
+• Smoothly fades to Video 3 (plays for 15 seconds)
+• Smoothly fades to Video 4 (plays for 15 seconds)
+• Smoothly fades to Video 5 (plays for 15 seconds)
+• Returns to Video 1 and repeats forever!
+• Total loop time: 75 seconds (1 minute 15 seconds)
+
+===============================================
+
+NEED MORE VIDEOS?
+-----------------
+Download FREE videos from:
+
+🔗 Pexels: https://www.pexels.com/videos/
+   Search: "luxury interior", "construction", "modern architecture"
+
+🔗 Pixabay: https://pixabay.com/videos/
+   Search: "interior design", "building construction"
+
+🔗 Coverr: https://coverr.co/
+   Browse: Architecture, Business categories
 
 ===============================================
 
 TROUBLESHOOTING:
 ----------------
-- If video doesn't play:
-  • Make sure the file is named exactly: background.mp4
-  • Make sure it's in the same folder as main.html
-  • Make sure it's an MP4 file
-  • Try a smaller video file (under 10MB works best)
+Press F12 in browser to see console messages:
+  ✅ "Video 1 loaded successfully!" - Video is working
+  ✅ "Video 2 loaded successfully!" - Video is working
+  ✅ "Video 3 loaded successfully!" - Video is working
+  ✅ "Video 4 loaded successfully!" - Video is working
+  ✅ "Video 5 loaded successfully!" - Video is working
+  ⚠️ "Video 1 not found" - Check file name and location
 
-- The animated gradient background will show if:
-  • No video file is found
-  • Video file is too large
-  • Video format is not supported
+Common Issues:
+• Make sure files are named EXACTLY: video1.mp4, video2.mp4, video3.mp4, video4.mp4, video5.mp4
+• Make sure they're in the same folder as main.html
+• Make sure they're MP4 files
+• Keep videos under 50MB each for best performance
+• If videos are too large, they may not load
 
 ===============================================
 
-RECOMMENDED VIDEO SEARCHES:
----------------------------
-• "luxury villa interior"
-• "modern house construction"
-• "architecture timelapse"
-• "interior design luxury"
-• "construction site aerial"
-• "modern office interior"
+CUSTOMIZATION:
+--------------
+Want to change how long each video plays?
 
-Keep videos under 20MB for best performance!
+1. Open main.html in a text editor
+2. Find this line (around line 2656):
+   let videoDuration = 15000;
+   
+3. Change 15000 to another number:
+   • 10000 = 10 seconds per video
+   • 20000 = 20 seconds per video
+   • 30000 = 30 seconds per video
+
+4. Save and refresh!
+
+===============================================
+
+SUGGESTED VIDEO THEMES FOR 5 VIDEOS:
+-------------------------------------
+Make your slideshow cohesive by choosing related videos:
+
+Theme 1 - Complete Home Tour:
+• Exterior/facade view
+• Living room & dining area
+• Kitchen walkthrough
+• Bedroom & bathroom
+• Garden/outdoor spaces
+
+Theme 2 - Construction Journey:
+• Site preparation & foundation
+• Frame & structure building
+• Roofing & exterior walls
+• Interior finishing
+• Final completed project
+
+Theme 3 - Luxury Showcase:
+• Grand entrance & lobby
+• Living spaces
+• Modern kitchen
+• Master bedroom suite
+• Outdoor/pool area
+
+Theme 4 - Mixed Portfolio:
+• Residential villa
+• Commercial office space
+• Interior design showcase
+• Construction timelapse
+• 3D/aerial view
+
+Keep all videos in similar style for professional look!
 
 ===============================================

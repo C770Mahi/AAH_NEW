@@ -77,8 +77,8 @@
             pointer-events: none;
         }
 
-        .video-background iframe,
-        .video-background video {
+        /* Video Slideshow Styles */
+        .video-background .bg-video {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -86,18 +86,17 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%);
             object-fit: cover;
-            opacity: 0.5;
+            opacity: 0;
             z-index: 0;
             pointer-events: none;
+            transition: opacity 2s ease-in-out;
         }
 
-        .video-background iframe {
-            width: 100vw;
-            height: 56.25vw; /* 16:9 aspect ratio */
-            min-height: 100vh;
-            min-width: 177.77vh; /* 16:9 aspect ratio */
+        .video-background .bg-video.active {
+            opacity: 0.5;
+            z-index: 1;
         }
 
         /* Navigation Header */
@@ -1518,14 +1517,31 @@
     </style>
 </head>
 <body>
-    <!-- Video Background -->
+    <!-- Video Background Slideshow -->
     <div class="video-background">
-        <!-- Local Video - Place your video file in the same folder -->
-        <video autoplay muted loop playsinline id="bgVideo">
-            <source src="background.mp4" type="video/mp4">
-            <source src="bg-video.mp4" type="video/mp4">
-            <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+        <!-- Video 1 -->
+        <video class="bg-video active" autoplay muted playsinline id="video1">
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Video 2 -->
+        <video class="bg-video" muted playsinline id="video2">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Video 3 -->
+        <video class="bg-video" muted playsinline id="video3">
+            <source src="video3.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Video 4 -->
+        <video class="bg-video" muted playsinline id="video4">
+            <source src="video4.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Video 5 -->
+        <video class="bg-video" muted playsinline id="video5">
+            <source src="video5.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -2641,48 +2657,76 @@ Date: ${new Date().toLocaleString()}`;
         }
 
         // ========================================
-        // VIDEO BACKGROUND INITIALIZATION
+        // VIDEO SLIDESHOW BACKGROUND
         // ========================================
         
         window.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('bgVideo');
+            const videos = document.querySelectorAll('.bg-video');
+            let currentVideoIndex = 0;
+            let videoDuration = 15000; // 15 seconds per video (change this to adjust duration)
             
-            if (video) {
-                console.log('🎬 Loading background video...');
-                
-                // Set video properties
+            console.log('🎬 Initializing video slideshow with ' + videos.length + ' videos');
+            
+            // Initialize all videos
+            videos.forEach((video, index) => {
                 video.muted = true;
                 video.playsInline = true;
-                video.autoplay = true;
                 video.volume = 0;
                 
-                // Try to play the video
-                const playPromise = video.play();
-                
-                if (playPromise !== undefined) {
-                    playPromise
-                        .then(() => {
-                            console.log('✅ Background video is playing!');
-                        })
-                        .catch(error => {
-                            console.log('ℹ️ Video file not found. Using animated gradient background.');
-                            console.log('📹 To add a video background:');
-                            console.log('   1. Download a construction/interior video MP4');
-                            console.log('   2. Rename it to: background.mp4');
-                            console.log('   3. Place it in the same folder as main.html');
-                        });
-                }
-                
-                // Handle video errors
-                video.addEventListener('error', function() {
-                    console.log('ℹ️ No video file found - using beautiful animated background');
-                });
-                
-                // Handle successful video load
+                // Try to load each video
                 video.addEventListener('loadeddata', function() {
-                    console.log('✅ Video loaded successfully!');
+                    console.log('✅ Video ' + (index + 1) + ' loaded successfully!');
                 });
+                
+                video.addEventListener('error', function() {
+                    console.log('⚠️ Video ' + (index + 1) + ' not found (video' + (index + 1) + '.mp4)');
+                });
+                
+                // When video ends, it will stay on last frame
+                video.addEventListener('ended', function() {
+                    // Keep showing current frame
+                });
+            });
+            
+            // Start first video
+            if (videos.length > 0) {
+                playVideo(currentVideoIndex);
             }
+            
+            // Function to play a specific video
+            function playVideo(index) {
+                // Hide all videos
+                videos.forEach(v => v.classList.remove('active'));
+                
+                // Show and play current video
+                const currentVideo = videos[index];
+                currentVideo.classList.add('active');
+                
+                // Play the video
+                currentVideo.currentTime = 0; // Start from beginning
+                currentVideo.play().catch(err => {
+                    console.log('Video ' + (index + 1) + ' playback issue (file might be missing)');
+                });
+                
+                console.log('▶️ Playing video ' + (index + 1) + ' of ' + videos.length);
+            }
+            
+            // Auto-rotate videos every 15 seconds
+            setInterval(() => {
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                playVideo(currentVideoIndex);
+            }, videoDuration);
+            
+            // Console instructions
+            console.log('📹 VIDEO SLIDESHOW SETUP:');
+            console.log('   Place these files in the same folder as main.html:');
+            console.log('   • video1.mp4');
+            console.log('   • video2.mp4');
+            console.log('   • video3.mp4');
+            console.log('   • video4.mp4');
+            console.log('   • video5.mp4');
+            console.log('   Videos will rotate every ' + (videoDuration/1000) + ' seconds!');
+            console.log('   Total slideshow duration: ' + ((videoDuration * videos.length)/1000) + ' seconds');
         });
     </script>
 </body>
