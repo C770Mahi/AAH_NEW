@@ -466,17 +466,17 @@
                 display: none;
             }
             
-            /* Keep desktop layout on mobile */
+            /* Exact desktop sizes on mobile */
             .page-header {
-                padding: 3rem 1.5rem;
+                padding: 4rem 1.5rem;
             }
             
             .page-header h1 {
-                font-size: 2.5rem;
+                font-size: 3rem; /* Same as desktop */
             }
             
             .page-header p {
-                font-size: 1.2rem;
+                font-size: 1.2rem; /* Same as desktop */
             }
             
             .projects-layout {
@@ -484,7 +484,7 @@
             }
             
             .projects-sidebar {
-                width: 280px;
+                width: 250px; /* Same as desktop */
                 flex-direction: column;
                 overflow-x: visible;
             }
@@ -494,7 +494,7 @@
                 width: 100%;
             }
             
-            /* Keep same sizes as desktop */
+            /* Exact desktop sizes */
             .projects-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -529,11 +529,11 @@
             }
             
             .project-info h3 {
-                font-size: 1.4rem;
+                font-size: 1.4rem; /* Same as desktop */
             }
             
             .project-description {
-                font-size: 1rem;
+                font-size: 1rem; /* Same as desktop */
             }
             
             .project-details {
@@ -547,22 +547,26 @@
         }
 
         @media (max-width: 480px) {
-            /* Keep desktop view even on small phones */
+            /* Exact desktop view even on small phones */
             .container {
                 padding: 0 1rem;
             }
             
             .page-header {
-                padding: 2.5rem 1rem;
-                margin-bottom: 2rem;
+                padding: 4rem 1rem; /* Same as desktop */
+                margin-bottom: 4rem;
             }
             
             .page-header h1 {
-                font-size: 2.2rem;
+                font-size: 3rem; /* Exact desktop size */
+            }
+            
+            .page-header p {
+                font-size: 1.2rem; /* Exact desktop size */
             }
             
             .projects-sidebar {
-                width: 260px;
+                width: 250px; /* Exact desktop size */
             }
             
             .filter-section {
@@ -570,7 +574,7 @@
             }
             
             .project-card {
-                padding: 1.8rem;
+                padding: 2rem; /* Exact desktop size */
             }
             
             .media-gallery {
@@ -593,20 +597,24 @@
             }
             
             .project-info h3 {
-                font-size: 1.3rem;
+                font-size: 1.4rem; /* Exact desktop size */
             }
             
             .project-type {
-                font-size: 0.9rem;
+                font-size: 1rem; /* Exact desktop size */
             }
             
             .project-description {
-                font-size: 1rem;
+                font-size: 1rem; /* Exact desktop size */
+            }
+            
+            .project-area, .project-duration {
+                font-size: 1rem; /* Exact desktop size */
             }
             
             .back-btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
+                padding: 1rem 2rem; /* Exact desktop size */
+                font-size: 1rem;
             }
         }
 
@@ -1146,6 +1154,35 @@
                 right: 85px;
                 font-size: 12px;
                 padding: 10px 15px;
+            }
+
+            .click-tooltip::after {
+                border-left: 8px solid #34495e;
+                border-top: 6px solid transparent;
+                border-bottom: 6px solid transparent;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .floating-click-btn {
+                width: 65px;
+                height: 65px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .floating-click-btn i {
+                font-size: 22px;
+            }
+
+            .floating-click-btn .btn-text {
+                font-size: 8px;
+            }
+
+            .click-tooltip {
+                right: 75px;
+                font-size: 11px;
+                padding: 8px 12px;
             }
         }
     </style>

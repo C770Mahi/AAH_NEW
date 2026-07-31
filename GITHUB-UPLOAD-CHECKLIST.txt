@@ -1,5 +1,12 @@
 ===============================================
-   GITHUB BACKUP - COMPLETE UPLOAD CHECKLIST
+✅ AAH DEVELOPERS - GITHUB UPLOAD CHECKLIST
+===============================================
+
+⚠️ MOBILE-FIRST PRIORITY ⚠️
+Most users browse on MOBILE! All features are optimized 
+for mobile devices first, then tablet, then desktop.
+See: MOBILE-FIRST-PRIORITY.txt for details.
+
 ===============================================
 
 Your GitHub Repository: https://github.com/C770Mahi/AAH_NEW
@@ -9,18 +16,18 @@ If you lose your local files, you can download everything from GitHub!
 
 ===============================================
 
-FILES TO UPLOAD (Total: 24 files)
+FILES TO UPLOAD (Total: 25 files)
 ----------------------------------
 
 ✓ CHECKLIST - Mark each file as you upload it:
 
-HTML FILES (6 files):
-□ index.html (12 KB) - Landing page
-□ main.html (104 KB) - Main website with nested navigation
-□ projects.html (43 KB) - 5-Floor Building with location (Bangalore)
-□ interior-design.html (10 KB)
-□ labour-contract.html (8 KB)
-□ material-contract.html (16 KB) - With 10-photo gallery & location
+HTML FILES (6 files) - ALL MOBILE OPTIMIZED:
+□ index.html (13 KB) - Landing page + floating button
+□ main.html (112 KB) - Main website + nested navigation + floating button
+□ projects.html (48 KB) - 5-Floor Building + location + floating button
+□ interior-design.html (12 KB) - Mobile responsive + floating button
+□ labour-contract.html (10 KB) - Mobile responsive + floating button
+□ material-contract.html (20 KB) - 10-photo gallery + location + floating button
 
 PROJECT PHOTOS - 5-FLOOR BUILDING (10 files):
 □ project1-photo1.jpeg (299 KB) - Site/Foundation
@@ -41,10 +48,11 @@ VIDEOS (5 files):
 □ video4.mp4 (27 MB) ⚠️ LARGE - Use method below
 □ video5.mp4 (44 MB) ⚠️ LARGE - Use method below
 
-LOGO & INSTRUCTIONS (4 files):
+LOGO & INSTRUCTIONS (5 files):
 □ logo.jpg (349 KB)
 □ PROJECT-PHOTOS-INSTRUCTIONS.txt (6 KB)
 □ VIDEO-INSTRUCTIONS.txt (4 KB)
+□ MOBILE-FIRST-PRIORITY.txt (8 KB) ⭐ NEW - Mobile optimization guide
 □ .nojekyll (0 KB) - Important for GitHub Pages!
 
 CONFIGURATION FOLDER:
@@ -109,8 +117,9 @@ BATCH 5 - Logo & Instructions:
    - logo.jpg
    - PROJECT-PHOTOS-INSTRUCTIONS.txt
    - VIDEO-INSTRUCTIONS.txt
+   - MOBILE-FIRST-PRIORITY.txt
    - .nojekyll
-3. Commit message: "Added logo and instructions"
+3. Commit message: "Added logo, instructions, and mobile-first guide"
 4. Click "Commit changes"
 
 ⚠️ PROBLEM: Videos 4 & 5 are TOO LARGE for web upload (>25MB limit)
@@ -174,26 +183,45 @@ STEP 1: Go to Repository
    https://github.com/C770Mahi/AAH_NEW
 
 STEP 2: Count Files
-   You should see 24 files total (or 21 without large videos)
+   You should see 25 files total (or 22 without large videos)
 
 STEP 3: Check GitHub Pages
    Your live website: https://c770mahi.github.io/AAH_NEW/
 
-STEP 4: Test Photo Gallery
+STEP 4: Test on MOBILE Device
+   Open on your phone: https://c770mahi.github.io/AAH_NEW/
+   Everything should work perfectly on mobile!
+
+STEP 5: Test Photo Gallery
    Visit: https://c770mahi.github.io/AAH_NEW/projects.html
-   Your 5-Floor Building with all 10 photos should display!
+   Your 5-Floor Building with location and all 10 photos should display!
+
+STEP 6: Test Floating Button
+   On any page, see the gold "Click Me" button in bottom-right
+   Tooltip appears every 5 seconds saying "Hey hi click me! 👋"
 
 ===============================================
 
 WHAT'S BACKED UP NOW?
 ---------------------
 
-✓ All 6 HTML pages (with nested navigation)
-✓ All 10 project photos (5-Floor Building gallery!)
+✓ All 6 HTML pages (MOBILE OPTIMIZED!)
+✓ Floating "Click Me" button on all pages
+✓ 10-photo gallery on material-contract.html
+✓ Project location: Bangalore, Hoskote
+✓ All 10 project photos (5-Floor Building!)
 ✓ 3-5 background videos (depending on method)
 ✓ Logo image
-✓ Instructions files
+✓ Instructions files (including mobile-first guide)
 ✓ GitHub Pages configuration
+
+⭐ MOBILE-FIRST OPTIMIZATIONS:
+✓ All pages work perfectly on mobile phones
+✓ Touch-friendly buttons and navigation
+✓ Responsive photo galleries
+✓ Desktop-like view on mobile (with zoom)
+✓ Floating button animations on mobile
+✓ Every 5-second tooltip on all devices
 
 ===============================================
 

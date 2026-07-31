@@ -332,6 +332,38 @@
         .click-tooltip.show { opacity: 1; animation: bounce-tooltip 0.5s ease; }
         @keyframes pulse-glow { 0%, 100% { box-shadow: 0 10px 30px rgba(212,175,55,0.5); } 50% { box-shadow: 0 10px 40px rgba(212,175,55,0.8), 0 0 30px rgba(212,175,55,0.4); } }
         @keyframes bounce-tooltip { 0%, 100% { transform: translateY(-50%) translateX(0); } 50% { transform: translateY(-50%) translateX(-10px); } }
+        
+        /* Mobile - Keep Desktop Font Sizes */
+        @media (max-width: 768px) {
+            .container { padding: 30px 20px; }
+            .header h1 { font-size: 2.5rem; } /* Same as desktop */
+            .service-item h3 { font-size: 1.5rem; } /* Same as desktop */
+            .design-services h2 { font-size: 1.5rem; } /* Same as desktop */
+            .design-item h4 { font-size: 1.2rem; } /* Same as desktop */
+            .contact-section h2 { font-size: 2rem; } /* Same as desktop */
+            .contact-section p { font-size: 1.1rem; } /* Same as desktop */
+            .contact-btn { font-size: 1rem; padding: 15px 30px; } /* Same as desktop */
+            
+            /* Floating button responsive */
+            .floating-click-btn { width: 70px; height: 70px; bottom: 20px; right: 20px; }
+            .floating-click-btn i { font-size: 24px; }
+            .floating-click-btn .btn-text { font-size: 9px; }
+            .click-tooltip { right: 85px; font-size: 12px; padding: 10px 15px; }
+            .click-tooltip::after { border-left: 8px solid #34495e; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+        }
+        
+        @media (max-width: 480px) {
+            .container { padding: 30px 15px; }
+            .header h1 { font-size: 2.5rem; } /* Exact desktop size */
+            .service-item h3 { font-size: 1.5rem; } /* Exact desktop size */
+            .contact-btn { font-size: 1rem; padding: 15px 30px; } /* Exact desktop size */
+            
+            /* Floating button responsive */
+            .floating-click-btn { width: 65px; height: 65px; bottom: 15px; right: 15px; }
+            .floating-click-btn i { font-size: 22px; }
+            .floating-click-btn .btn-text { font-size: 8px; }
+            .click-tooltip { right: 75px; font-size: 11px; padding: 8px 12px; }
+        }
     </style>
 
     <script>
