@@ -18,13 +18,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #000;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
+            background: #000;
         }
 
-        /* Video Background */
+        /* Luxury Animated Background */
         .video-background {
             position: fixed;
             top: 0;
@@ -33,6 +33,48 @@
             height: 100%;
             z-index: 0;
             overflow: hidden;
+            background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e, #16213e);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Luxury Pattern Overlay */
+        .video-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(90deg, rgba(212,175,55,0.03) 0px, transparent 1px, transparent 40px),
+                repeating-linear-gradient(0deg, rgba(212,175,55,0.03) 0px, transparent 1px, transparent 40px);
+            z-index: 1;
+        }
+
+        /* Elegant Overlay */
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(212,175,55,0.08) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 2;
+            pointer-events: none;
         }
 
         .video-background video {
@@ -45,31 +87,13 @@
             height: auto;
             transform: translate(-50%, -50%);
             object-fit: cover;
-            opacity: 0.8;
-        }
-
-        .video-background::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(30,30,30,0.65) 100%);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        /* Fallback background if video doesn't load */
-        .video-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+            opacity: 0;
             z-index: 0;
+        }
+
+        .video-background video.loaded {
+            opacity: 0.6;
+            transition: opacity 2s ease-in;
         }
 
         /* Navigation Header */
@@ -313,7 +337,7 @@
             margin-top: 80px;
             padding: 2rem 0;
             position: relative;
-            z-index: 1;
+            z-index: 10;
         }
 
         .container {
@@ -1490,14 +1514,11 @@
     </style>
 </head>
 <body>
-    <!-- Video Background -->
+    <!-- Luxury Animated Background -->
     <div class="video-background">
         <video autoplay muted loop playsinline id="bgVideo">
-            <!-- Multiple video sources for better compatibility -->
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-architecture-of-a-luxurious-building-4124-large.mp4" type="video/mp4">
-            <source src="https://cdn.pixkit.co/videos/preview/mixkit-modern-luxury-house-interior-4129-large.mp4" type="video/mp4">
-            <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6d388d82b1&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
+            <source src="https://cdn.coverr.co/videos/coverr-luxury-modern-house-interior-3297/1080p.mp4" type="video/mp4">
+            <source src="https://cdn.coverr.co/videos/coverr-construction-site-3847/1080p.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -2613,20 +2634,21 @@ Date: ${new Date().toLocaleString()}`;
         }
 
         // ========================================
-        // VIDEO BACKGROUND INITIALIZATION
+        // LUXURY BACKGROUND WITH VIDEO ENHANCEMENT
         // ========================================
         
-        // Initialize video background on page load
+        // Initialize video background on page load (Optional Enhancement)
         window.addEventListener('DOMContentLoaded', function() {
             const video = document.getElementById('bgVideo');
             
             if (video) {
-                console.log('🎬 Initializing background video...');
+                console.log('🎬 Attempting to load luxury video background...');
                 
-                // Force video to play
+                // Set video properties
                 video.muted = true;
                 video.playsInline = true;
                 video.autoplay = true;
+                video.volume = 0;
                 
                 // Try to play the video
                 const playPromise = video.play();
@@ -2634,38 +2656,41 @@ Date: ${new Date().toLocaleString()}`;
                 if (playPromise !== undefined) {
                     playPromise
                         .then(() => {
-                            console.log('✅ Background video playing successfully');
-                            video.style.opacity = '0.8';
+                            console.log('✅ Video background loaded successfully');
+                            video.classList.add('loaded');
                         })
                         .catch(error => {
-                            console.log('⚠️ Video autoplay failed:', error);
-                            // Fallback: show gradient background
-                            console.log('Using fallback gradient background');
+                            console.log('ℹ️ Using animated gradient background (video optional)');
+                            video.style.display = 'none';
                         });
                 }
                 
-                // Handle video errors
-                video.addEventListener('error', function(e) {
-                    console.log('❌ Video error:', e);
-                    console.log('Using fallback gradient background');
+                // Handle video errors (gracefully fail to animated background)
+                video.addEventListener('error', function() {
+                    console.log('ℹ️ Using animated gradient background');
+                    video.style.display = 'none';
                 });
                 
                 // Handle video loading
                 video.addEventListener('loadeddata', function() {
-                    console.log('✅ Video loaded successfully');
+                    console.log('✅ Video ready');
                 });
+                
+                // Timeout fallback - if video doesn't load in 5 seconds, hide it
+                setTimeout(() => {
+                    if (video.readyState < 3) {
+                        console.log('ℹ️ Video loading timeout - using animated background');
+                        video.style.display = 'none';
+                    }
+                }, 5000);
             }
         });
 
-        // User interaction fallback - try to play video on first click
+        // User interaction fallback
         document.addEventListener('click', function playOnClick() {
             const video = document.getElementById('bgVideo');
-            if (video && video.paused) {
-                video.play().then(() => {
-                    console.log('✅ Video started after user interaction');
-                }).catch(err => {
-                    console.log('⚠️ Could not start video:', err);
-                });
+            if (video && video.paused && video.style.display !== 'none') {
+                video.play().catch(() => {});
             }
         }, { once: true });
     </script>
